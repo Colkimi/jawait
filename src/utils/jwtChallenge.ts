@@ -340,7 +340,7 @@ export class ChallengeAPI {
             message: "🏆 Super admin access granted! But the ultimate challenges await...",
             secretData: {
               message: "Super admin access achieved",
-              ultimateChallenge: "Ready for the real deal? Try microservice and quantum-admin!"
+              ultimateChallenge: "Ready for the real deal?"
             }
           };
 
