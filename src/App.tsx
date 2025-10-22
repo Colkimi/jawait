@@ -562,7 +562,7 @@ Try using this token with the admin endpoints!`);
         <footer className="footer">
           <p>🎮 Evolved Security Challenge - Advanced Penetration Testing Laboratory</p>
           <p>💡 Educational platform for security professionals and enthusiasts</p>
-          <p>🚀 Deployed with zero backend dependencies - Perfect for any hosting platform</p>
+          <p>🚀 &copy; 2025 All security evolved <br /> @colkimi</p>
         </footer>
       </div>
   )
