@@ -39,7 +39,6 @@ console.log('📄 Public key available at /api/public-key endpoint');
 
 // Helper function to create fake admin check
 function fakeAdminCheck(token) {
-  // This creates a false sense of security - checking isAdmin but not validating properly
   try {
     const decoded = jwt.decode(token); // Note: decode, not verify!
     return decoded && decoded.isAdmin === true;
