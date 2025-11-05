@@ -55,7 +55,6 @@ app.get('/api/public-key', (req, res) => {
   });
 });
 
-// Login endpoint with multiple vulnerabilities
 app.post('/api/login', (req, res) => {
   const { username, password, stage } = req.body;
   
