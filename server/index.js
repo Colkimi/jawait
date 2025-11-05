@@ -12,7 +12,6 @@ const PORT = 3001;
 app.use(cors());
 app.use(express.json());
 
-// Simulate a database
 const users = [
   { id: 1, username: 'user', password: 'password123', isAdmin: false, role: 'user' },
   { id: 2, username: 'guest', password: 'guest123', isAdmin: false, role: 'guest' },
