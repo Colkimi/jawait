@@ -18,7 +18,6 @@ const users = [
   { id: 3, username: 'moderator', password: 'mod123', isAdmin: false, role: 'moderator' }
 ];
 
-// Generate RSA key pair for the challenge
 const { publicKey, privateKey } = crypto.generateKeyPairSync('rsa', {
   modulusLength: 2048,
   publicKeyEncoding: { type: 'spki', format: 'pem' },
