@@ -8,11 +8,9 @@ const path = require('path');
 const app = express();
 const PORT = 3001;
 
-// Middleware
 app.use(cors());
 app.use(express.json());
 
-// Simulate a database
 const users = [
   { id: 1, username: 'user', password: 'password123', isAdmin: false, role: 'user' },
   { id: 2, username: 'guest', password: 'guest123', isAdmin: false, role: 'guest' },
@@ -26,7 +24,6 @@ const { publicKey, privateKey } = crypto.generateKeyPairSync('rsa', {
   privateKeyEncoding: { type: 'pkcs8', format: 'pem' }
 });
 
-// Secrets for different stages
 const HMAC_SECRET = 'super_secret_hmac_key_that_should_not_be_guessed';
 const WEAK_SECRET = 'secret'; // Intentionally weak for brute force
 const ADMIN_SECRET = 'ultra_secure_admin_only_secret_key_9x7z2m5n';
