@@ -17,7 +17,6 @@ const users = [
   { id: 3, username: 'moderator', password: 'mod123', isAdmin: false, role: 'moderator' }
 ];
 
-// Generate RSA key pair for the challenge
 const { publicKey, privateKey } = crypto.generateKeyPairSync('rsa', {
   modulusLength: 2048,
   publicKeyEncoding: { type: 'spki', format: 'pem' },
@@ -38,7 +37,6 @@ console.log('📄 Public key available at /api/public-key endpoint');
 
 // Helper function to create fake admin check
 function fakeAdminCheck(token) {
-  // This creates a false sense of security - checking isAdmin but not validating properly
   try {
     const decoded = jwt.decode(token); // Note: decode, not verify!
     return decoded && decoded.isAdmin === true;
@@ -55,7 +53,6 @@ app.get('/api/public-key', (req, res) => {
   });
 });
 
-// Login endpoint with multiple vulnerabilities
 app.post('/api/login', (req, res) => {
   const { username, password, stage } = req.body;
   
